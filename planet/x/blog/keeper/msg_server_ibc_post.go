@@ -18,16 +18,16 @@ func (k msgServer) SendIbcPost(goCtx context.Context, msg *types.MsgSendIbcPost)
 
 	packet.Title = msg.Title
 	packet.Content = msg.Content
+	packet.Creator = msg.Creator
 
-	// Transmit the packet
-	err := k.TransmitIbcPostPacket(
-		ctx,
-		packet,
-		msg.Port,
-		msg.ChannelID,
-		clienttypes.ZeroHeight(),
-		msg.TimeoutTimestamp,
-	)
+    err := k.TransmitIbcPostPacket(
+        ctx,
+        packet,
+        msg.Port,
+        msg.ChannelID,
+        clienttypes.ZeroHeight(),
+        msg.TimeoutTimestamp,
+    )
 	if err != nil {
 		return nil, err
 	}
