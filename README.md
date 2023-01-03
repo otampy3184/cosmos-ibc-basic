@@ -21,3 +21,8 @@ cd planet
 
 独自モジュールはxディレクトリ内に生成される
 
+```:
+% ignite scaffold list post title content creator --no-message --module blog
+% ignite scaffold list sentPost postID title chain creator --no-message --module blog 
+% ignite scaffold list timedoutPost title chain creator --no-message --module blog
+```
