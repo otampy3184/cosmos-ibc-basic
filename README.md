@@ -26,3 +26,7 @@ cd planet
 % ignite scaffold list sentPost postID title chain creator --no-message --module blog 
 % ignite scaffold list timedoutPost title chain creator --no-message --module blog
 ```
+
+```:
+% ignite scaffold packet ibcPost title content --ack postID --module blog
+```
